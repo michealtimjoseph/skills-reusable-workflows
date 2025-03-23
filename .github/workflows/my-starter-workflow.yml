@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      node: 14
   build:
     runs-on: ubuntu-latest
 
